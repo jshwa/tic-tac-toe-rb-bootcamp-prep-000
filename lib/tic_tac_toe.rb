@@ -78,7 +78,7 @@ def turn(board)
     if over?(board)
       if won?(board)
         return "#{winner?(board)} is the winner!"
-      else 
+      else
         puts "Cat's Game!"
     end
   else
