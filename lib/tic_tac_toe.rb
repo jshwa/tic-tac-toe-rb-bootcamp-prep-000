@@ -75,21 +75,22 @@ def turn(board)
   if valid_move?(board, index)
     move(board, index)
     display_board(board)
-    if over?(board)
-      if won?(board)
-        return "#{winner(board)} is the winner!"
-      else
-        puts "Cat's Game!"
-      end
-    end
   else
     turn(board)
   end
 end
 
 def play(board)
-  9.times do
+  while !over?(board)
     turn(board)
+  end
+  
+  if over?(board)
+    if won?(board)
+      return "#{winner(board)} is the winner!"
+    else
+      puts "Cat's Game!"
+    end
   end
 end
 
