@@ -80,6 +80,7 @@ def turn(board)
         return "#{winner?(board)} is the winner!"
       else
         puts "Cat's Game!"
+      end
     end
   else
     turn(board)
